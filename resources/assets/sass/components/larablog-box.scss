@@ -1,0 +1,21 @@
+.larablog-box {
+	@extend .box;
+	border-radius: 0;
+}
+.larablog-box .article {
+	@extend .content;
+}
+.larablog-box .article .title {
+	font-weight: 500;
+	color: $larablog-standard-color;
+	font-size: $larablog-h2-size;
+}
+.larablog-box .article p {
+	color: $larablog-standard-color;
+	font-size: $laralog-standard-size;
+	line-height: 1.4;
+}
+.larablog-box-footer {
+	color: #b5b5b5;
+	font-size: $laralog-standard-size;
+}

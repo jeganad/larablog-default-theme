@@ -1,0 +1,26 @@
+{
+    "name": "naoray/larablog-default-theme",
+    "type": "package",
+    "description": "The default theme of larablog.",
+    "keywords": [
+        "larablog",
+        "theme",
+        "blog"
+    ],
+    "homepage": "https://github.com/naoray/larablog-default-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Naoray",
+            "email": "krishan.koenig@gmail.com",
+            "homepage": "https://nms.digital"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Naoray\\LarablogDefaultTheme\\": "app/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}

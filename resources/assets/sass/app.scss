@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
+
+@import "variables";
+
+/**
+ * Import bulma
+ */
+@import "node_modules/bulma/bulma";
+
+/**
+ * Import components
+ */
+@import "./components/larablog-box";
+
+html {
+	min-height: 100%;
+	display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+.nav {
+	box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+}
+.main-section {
+	@extend .section;
+	flex: 1;
+	background-color: #F0F0F0;
+}
