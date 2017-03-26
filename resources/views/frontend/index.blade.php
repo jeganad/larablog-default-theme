@@ -4,11 +4,13 @@
     @if ($posts)
         <section class="main-section">
         	<div class="container">
-                <div class="columns">
-                    <div class="column">
-                        @component('larablog::frontend.post')
-                        @endcomponent
-                    </div>
+                <div class="columns is-multiline">
+                    @foreach($posts as $post)
+                        <div class="column is-12">
+                            @component('larablog::shared.post', ['post' => $post])
+                            @endcomponent
+                        </div>
+                    @endforeach
                 </div>
         	</div>
         </section>
