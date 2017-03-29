@@ -2,6 +2,22 @@
 
 @section('content')
 	<section class="main-section">
+		<div class="level">
+			<div class="level-item">
+				<a href="{{ route('larablog.backend.posts.index') }}" class="button">
+					All Posts
+				</a>
+			</div>
+		</div>
+		<div class="columns is-centered">
+			<div class="column is-8 box">
+				<form action="{{ route('larablog.backend.posts.update', ['post' => $post->id]) }}" method="POST">
+					{{ method_field('PUT') }}
+					{{ csrf_field() }}
 
+					@include('larablog::backend.partials.createOrEdit')
+				</form>	
+			</div>
+		</div>
 	</section>
 @stop
