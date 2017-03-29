@@ -3,13 +3,14 @@
 		<article class="article">
 			<h2 class="title is-2">{{ $post->title }}</h2>
 	    	<hr/>
-	        {{ $post->body }}        
+	        {!! $post->body !!}    
 		</article>
 	    <div class="larablog-box-footer">
 	        <div class="level">
 				<div class="level-left">
 					<div class="level-item content">
-						<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;{{ $post->published_at->formatLocalized('%d %B %Y') }}	
+						<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;
+						{{ ($post->published_at) ? $post->published_at->formatLocalized('%d %B %Y') : 'not yet published' }}
 					</div>
 				</div>
 				<div class="level-right">
