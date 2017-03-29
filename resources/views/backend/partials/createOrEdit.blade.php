@@ -21,7 +21,7 @@
 
 <p class="control">
 <label class="checkbox">
-  	<input type="checkbox" name="publish" {{ old('publish', $post->is_published) ? 'checked="checked"' : '' }} />
+  	<input type="checkbox" name="is_published" {{ old('is_published', $post->is_published) ? 'checked="checked"' : '' }} />
 		Publish
 </label>
 </p>
