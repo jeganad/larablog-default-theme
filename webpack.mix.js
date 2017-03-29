@@ -12,4 +12,6 @@ const { mix } = require('laravel-mix');
  */
 
 mix.setPublicPath('public')
-	.sass('resources/assets/sass/app.scss', 'public/css');
+	.sass('resources/assets/sass/app.scss', 'public/css')
+	.js('resources/assets/js/app.js', 'public/js')
+	.extract(['vue']);

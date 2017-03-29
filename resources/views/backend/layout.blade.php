@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('larablog::shared.master-layout')
 
-    <title>{{ config('larablog.title') }}</title>
+@section('main')
+    @include(config('larablog.layouts.header.backend'))
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-    <!-- Styles -->
-    <link href="{{ asset('vendor/larablog/css/app.css') }}" rel="stylesheet" type="text/css">
-</head>
-<body>
-	@include(config('larablog.layouts.header.backend'))
-
-	@yield('content')
+    @yield('content')
 
     @include(config('larablog.layouts.footer.backend'))
-</body>
-</html>
+@stop
