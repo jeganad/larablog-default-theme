@@ -15,4 +15,6 @@
         	</div>
         </section>
     @endif
+    
+    {{ $posts->links('larablog::shared.pagination') }}
 @stop
