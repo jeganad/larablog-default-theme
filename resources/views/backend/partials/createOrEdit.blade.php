@@ -26,6 +26,11 @@
 </label>
 </p>
 
-<p class="control">
-<button class="button is-primary">Submit</button>
-</p>
+<div class="field is-grouped has-justified-space-between">
+	<div class="control">
+		<a href="{{ route('larablog.backend.posts.index') }}" class="button is-link">Cancel</a>
+	</div>
+	<div class="control">
+		<button class="button is-primary">Submit</button>
+	</div>
+</div>

@@ -16,11 +16,6 @@
             "homepage": "https://nms.digital"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Naoray\\LarablogDefaultTheme\\": "app/"
-        }
-    },
     "minimum-stability": "stable",
     "require": {}
 }
