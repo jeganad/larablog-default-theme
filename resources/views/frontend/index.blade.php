@@ -7,7 +7,7 @@
                 <div class="columns is-multiline">
                     @foreach($posts as $post)
                         <div class="column is-12">
-                            @component('larablog::shared.post', ['post' => $post])
+                            @component('larablog::shared.post', ['post' => $post, 'showPreview' => true])
                             @endcomponent
                         </div>
                     @endforeach

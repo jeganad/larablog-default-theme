@@ -1,16 +1,42 @@
 <larablog-post inline-template>
 	<div class="larablog-box">
 		<article class="article">
-			<h2 class="title is-2">{{ $post->title }}</h2>
+			<div class="div larablog-box-meta">
+				<div class="level">
+					<div class="level-left">
+						<div class="level-item content">
+							<a href="{{ route('larablog.post.show', ['slug' => $post->slug]) }}">
+								<h2 class="title is-2">{{ $post->title }}</h2>
+							</a>
+						</div>
+					</div>
+					<div class="level-right">
+						<div class="level-item content">
+							<p>
+								Written by
+								{{-- <i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;&nbsp; --}}
+								<a href="">{{ $post->author->name }}</a>,
+								published on
+								{{ ($post->published_at) ? $post->published_at->formatLocalized('%d %B %Y') : 'not yet published' }}					
+							</p>	
+						</div>
+					</div>
+				</div>
+			</div>
 	    	<hr/>
-	        {!! $post->body !!}    
+	    	@if ($showPreview)
+	        	{!! str_limit($post->body, config('larablog.post_preview_length')) !!}
+    		@else
+    			{!! $post->body !!}
+			@endif
 		</article>
 	    <div class="larablog-box-footer">
 	        <div class="level">
 				<div class="level-left">
 					<div class="level-item content">
-						<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;
-						{{ ($post->published_at) ? $post->published_at->formatLocalized('%d %B %Y') : 'not yet published' }}
+						@if ($showPreview)
+							<a href="{{ route('larablog.post.show', ['slug' => $post->slug]) }}">Read more</a>
+						@endif
 					</div>
 				</div>
 				<div class="level-right">

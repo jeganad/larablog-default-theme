@@ -8,7 +8,7 @@
     <title>{{ config('larablog.title') }}</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('vendor/larablog/css/app.css') }}" rel="stylesheet" type="text/css">
