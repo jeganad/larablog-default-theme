@@ -11,7 +11,7 @@ Larablog-default-theme is the default appearance of the [Larablog](https://githu
 Via Composer
 
 ``` bash
-$ composer require naoray/larablog-default-theme
+$ composer require  jeganad/larablog-default-theme
 ```
 
 ## Contributing
